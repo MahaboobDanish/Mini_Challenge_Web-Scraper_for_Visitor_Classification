@@ -184,7 +184,7 @@ def classify_content(content):
     return result
 
 
-
+# Intial Ways
 
 # # from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 # from sklearn.feature_extraction.text import TfidfVectorizer

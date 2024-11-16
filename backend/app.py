@@ -13,7 +13,6 @@ CORS(app, origins="*", allow_headers=["Content-Type", "Authorization"])
 def classify():
     data = request.json
     url = data.get('url')
-    print("HELLO")
     if not url:
         return jsonify({"error": "URL is required"}), 400
 
@@ -25,7 +24,7 @@ def classify():
         if isinstance(classification["question"], str):
             # print("***HIIIII*****")
             classification["question"] = [classification["question"]]  # Wrap the question in an array
-        print("Classification data: ", classification)
+        # print("Classification data: ", classification)
         return jsonify({
             "questions": classification["question"],
             "options": classification["options"]
