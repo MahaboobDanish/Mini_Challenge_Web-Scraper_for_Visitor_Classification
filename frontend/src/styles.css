@@ -1,0 +1,235 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated to a friendly, readable font */
+    background-color: #F7F9FB;  /* Light, neutral background */
+    color: #333;
+    text-align: center;
+    overflow-y: auto;  /* Allow vertical scrolling */
+}
+
+
+/* Container */
+.app {
+    width: 100%;
+    max-width: 1000px;  /* Limit width for readability */
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Styles */
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #F0F4F8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    padding: 12px;
+    margin-right: 20px;
+    width: 250px;
+    font-size: 16px;
+    border: 2px solid #d1e3f5;  /* Light border to indicate input */
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;  /* Blue border to indicate focus */
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #FF7043;  /* Soft orange to evoke energy */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FF5722;  /* Slightly darker orange */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Question Section */
+.questions {
+    margin-top: 40px;
+}
+
+.questions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.questions li {
+    font-size: 18px;
+    margin: 10px 0;
+    background-color: #FFEBEE;  /* Soft pinkish background for soothing effect */
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.questions li:hover {
+    background-color: #FFE0B2;  /* Light orange hover effect */
+}
+
+/* Error Message */
+.error {
+    color: #D32F2F;  /* Red color for errors, to make it noticeable */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Add stickers and decorative elements */
+.sticker {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #FF7043;  /* Orange accent for the stickers */
+}
+
+/* Flashcard-like design for question elements */
+.flashcard {
+    background-color: #E3F2FD;  /* Light blue for the flashcards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Frame effect for options */
+.option-frame {
+    background-color: #FFEBEE;  /* Soft pinkish background */
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 2px solid #FF7043;  /* Soft orange border */
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.option-frame:hover {
+    transform: scale(1.05);  /* Slight scale on hover */
+}
+
+.option-frame:active {
+    transform: scale(0.98);  /* Small shrink effect on click */
+}
+
+/* Rounded avatars or stickers */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FF7043;  /* Orange color for stickers */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+/* Sticky bottom message */
+.sticky-message {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #007bff;  /* Calming blue */
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in effect for all elements */
+.app, .input-form, .questions, .flashcard, .option-frame, .sticky-message {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+
+/* .app{
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.input-form {
+    margin: 20px;
+}
+
+input[type="text"]{
+    padding: 8px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 8px 16 px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+.questions{
+    margin-top: 20px;
+}
+
+.questions ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.questions li{
+    margin: 5px 0;
+}
+
+.error {
+    color: red;
+} */
