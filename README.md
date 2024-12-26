@@ -20,7 +20,7 @@ Frontend: React (for UI development).
 
 Backend: Flask (API handling, machine learning integration).
 
-ML Model: Scikit-learn (content classification).
+ML Model: Scikit-learn (content classification): MultinomialNB.
 
 Web Scraping: BeautifulSoup (content extraction).
 
